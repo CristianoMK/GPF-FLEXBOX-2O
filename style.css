@@ -1,3 +1,16 @@
 body {
     display: flex;
 }
+
+.topo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    
+}
+
+.menu {}
