@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -9,18 +10,85 @@
 
 <body>
     <header class="topo">
-        <div class="logo"> LOGO </div>
-        <ul class="menu"> MENU </ul>
+        <div class="logo"><img src="./assets/img/logopreta.png" alt="LOGO"></div>
+
+        <ul class="menu">
+            <li> INTRODUÇÃO </li>
+            <li> CARDS </li>
+            <li> RODAPÉ </li>
+            <li class="entrar">ENTRAR</li>
+        </ul>
+
+
     </header>
 
-    <section class="destaque"> DESTAQUE </section>
+    <section class="introducao">
+        <h1>FLEXBOX</h1>
+        <p>O Flexbox é um modelo de layout unidimensional que permite organizar elementos em uma única linha ou coluna,
+            facilitando o alinhamento, a distribuição de espaço e a adaptação a diferentes tamanhos de tela. Ele é
+            amplamente utilizado no desenvolvimento web para criar layouts responsivos e flexíveis.</p>
+    </section>
 
     <main class="grade">
-        <article class="card"> CARD1 </article>
-        <article class="card"> CARD2 </article>
+
+        <article class="card destaque"> <!-- como ficará apos ser clicado -->
+            <h2>Flex Container e Flex Items</h2>
+            <p> O elemento que recebe <code>display: flex</code> se torna um <strong>Flex Container</strong>. Seus
+                filhos
+                diretos passam a ser <strong>Flex Items</strong>. </p>
+            <button>ALTERNAR DESTAQUE</button>
+        </article>
+
+        <article class="card">
+            <h2>flex-direction</h2>
+            <p> Define a direção em que os Flex Items são organizados dentro do container. </p>
+            <p> Valores: <code>row</code>, <code>column</code>, <code>row-reverse</code> e <code>column-reverse</code>.
+            </p>
+            <button>ALTERNAR DESTAQUE</button>
+        </article>
+
+        <article class="card">
+            <h2>justify-content</h2>
+            <p> Controla como os elementos são distribuídos ao longo do <strong>eixo principal</strong>. </p>
+            <p> Exemplos: <code>flex-start</code>, <code>center</code>, <code>flex-end</code> e
+                <code>space-between</code>.
+            </p>
+            <button>ALTERNAR DESTAQUE</button>
+        </article>
+
+        <article class="card">
+            <h2>align-items</h2>
+            <p> Controla o alinhamento dos elementos no <strong>eixo transversal</strong>. </p>
+            <p> Exemplos: <code>stretch</code>, <code>flex-start</code>, <code>center</code> e <code>flex-end</code>.
+            </p><button>ALTERNAR DESTAQUE</button>
+        </article>
+
+        <article class="card">
+            <h2>flex-wrap</h2>
+            <p> Define se os elementos devem permanecer em uma única linha ou quebrar para uma nova linha quando não
+                houver
+                espaço. </p>
+            <p> Valores: <code>nowrap</code>, <code>wrap</code> e <code>wrap-reverse</code>. </p>
+            <button>ALTERNAR DESTAQUE</button>
+        </article>
+
+        <article class="card">
+            <h2>flex</h2>
+            <p> É um atalho para definir o crescimento, a redução e o tamanho inicial de um Flex Item. </p>
+            <p> Exemplo: <code>flex: 1 1 280px</code>. </p>
+            <button>ALTERNAR DESTAQUE</button>
+            <span class="novo">NOVO!</span>
+        </article>
+
     </main>
 
-    <footer class="rodape">RODAPE</footer>
+    <footer class="rodape">
+        <div>sobre.</div>
+        <div>contato.</div>
+        <div class="direitaFooter">GitPush&Fé © 2026.</div>
+    </footer>
 </body>
+
+<script src="script.js"></script>
 
 </html>

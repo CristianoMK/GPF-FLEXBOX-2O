@@ -1,16 +1,156 @@
 body {
+    font-family: Verdana, sans-serif;
+    /*sans serif é para o <code></code> */
+    gap: 1vh;
     display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .topo {
+    padding: 1vh;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     align-items: center;
+
+    /*
+    justify-content: space-between;
+    */
+
+
+    background-color: #dddd;
+    border-radius: 10px;
+    border: 3px solid #8f8f8f;
 }
 
 .logo {
-    
+    flex-shrink: 0;
+    margin-right: auto;
 }
 
-.menu {}
+.logo img {
+    height: auto;
+    max-width: 96px;
+}
+
+.menu {
+    /*
+    justify-content: center;
+    */
+    display: flex;
+    gap: 24px;
+    list-style: none;
+}
+
+.menu li {
+    /*muda o cursor ao passar com o mouse sobre*/
+    cursor: pointer;
+    padding: 1vh;
+}
+
+.menu li:hover {
+    background-color: #ccc;
+}
+
+.entrar {
+    background-color: #07ba3f;
+    cursor: pointer;
+}
+
+.entrar:hover {
+    background-color: #0a7e2f;
+}
+
+.introducao {
+    display: flex;
+    flex-direction: column;
+
+    padding: 1vh;
+    background-color: #dddd;
+    border-radius: 10px;
+    border: 3px solid #8f8f8f;
+}
+
+.grade {
+    display: flex;
+    flex-wrap: wrap;
+
+    padding: 1vh;
+    gap: 24px;
+    flex: 1;
+
+    background-color: #dddd;
+    border-radius: 10px;
+    border: 3px solid #8f8f8f;
+}
+
+.card {
+    display: flex;
+    flex: 1 1 280px;
+    flex-direction: column;
+
+    border-radius: 10px;
+    border: 3px solid #8f8f8f;
+    padding: 1vh;
+    background-color: #ebebeb;
+}
+
+.card.destaque {
+    border: 3px solid #07ba3f;
+    background-color: #c7f5d0;
+    flex-grow: 2;
+}
+
+/* para a classe button dentro de cada card */
+.card button {
+    margin-top: auto;
+}
+
+.novo {
+    order: -1;
+}
+
+/*.destaque {
+    /* isso ta sendo o espaço entre os card e o topo, já que não sabia o que fazer com ele
+    flex: 1 1 280px;
+}*/
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    padding: 1vh;
+    gap: 24px;
+
+    background-color: #dddd;
+    border-radius: 10px;
+    border: 3px solid #8f8f8f;
+}
+
+/* neste caso eu poderia colocar tanto last child quanto nth-child(3) do footer. Optei por colocar a classe no último elemento */
+.direitaFooter {
+    margin-left: auto;
+}
+
+/*
+1-Qual é o eixo principal do .topo e qual é o do body?Por que eles são diferentes?
+.topo tem eixo principal horizontal (row),
+enquanto o body tem eixo principal vertical (column). Isso acontece porque o .topo organiza logo e menu lado a lado, enquanto o body organiza topo, conteúdo e rodapé de cima para baixo.
+*/
+
+/*
+2-Por que flex: 1 1 280px dá um resultado diferente de width: 280px nos cards?
+flex: 1 1 280px permite que os cards cresçam e encolham conforme o espaço disponível, usando 280px como tamanho inicial; width: 280px tenta manter os cards com essa largura.
+*/
+/*
+3-O que acontece com a grade se você trocar flex-wrap: wrap por nowrap? 
+Com nowrap, os cards ficam todos na mesma linha e podem ultrapassar a largura disponível da tela.
+*/
+/*
+4-Explique em uma frase. Se o align-items: center do topo for removido, o que muda na tela e por quê? 
+Sem align-items: center, os elementos deixam de ser centralizados no eixo transversal e passam a usar o valor padrão; align-items: stretch.
+*/
+/*
+5-Onde, na sua solução, o order pode atrapalhar quem navega por teclado?
+O order pode atrapalhar a navegação por teclado porque pode fazer a ordem visual dos elementos ficar diferente da ordem do HTML, deixando a navegação menos intuitiva.
+*/
